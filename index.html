@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos númericos</title>
+    <script src="interpolacionLineal.js"></script>
+</head>
+<body>
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('fondo.jpg'); 
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+        .title {
+        font-family: fantasy;
+        font-size: xx-large;
+        font-weight: bold;
+        color: #000; 
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+        .container {
+        background-color: #fff; 
+        padding: 20px;
+        border-radius: 10px;            
+        text-align: center;
+    }
+
+    select, button {
+        margin-top: 10px;
+        padding: 8px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #000;
+        color: #fff;
+    }
+
+    select {
+        margin-bottom: 5px;
+    }
+
+    button {
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        margin-top: 5px;
+    }
+
+    button:hover {
+        background-color: #555;
+    }
+    </style>
+
+    <div class="container">
+        <div class="title">INTERPOLACIONES:</div>
+            <select id="metodos">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="index1.html">Interpolación lineal</option>
+                <option value="index2.html">Aproximación polinomial de Newton</option>
+                <option value="index3.html">Polinomios de Interpolación de Lagrange 1er. Orden</option>
+                <option value="index4.html">Polinomios de Interpolación de Lagrange 2do. Orden</option>
+            </select><br><br>
+        <button onclick="vamonos()">Ir</button>
+    </div>
+</body>
+</html>

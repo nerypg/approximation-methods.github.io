@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos númericos</title>
+    <script src="interpolacionLineal.js"></script>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 20px;
+            margin: 0;
+            background-color: #333;
+            text-align: center;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+
+        .menu li a {
+            display: block;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .menu li a:hover {
+            background-color: #555;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            color: #555;
+        }
+
+        input[type="number"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+        background-color: #555;
+        }
+    </style>
+
+    <ul class="menu">
+        <li><a href="index.html">Menú</a></li>
+        <li><a href="index1.html">Interpolación lineal</a></li>
+        <li><a href="index3.html">Polinomios de interpolación de Lagrange 1er. Orden</a></li>
+        <li><a href="index4.html">Polinomios de interpolación de Lagrange 2do. Orden</a></li>
+    </ul>
+
+    <h1>Aproximación cuadrática de Newton</h1>
+    <label>x = <input type="number" id="2x"></label><br><br>
+    <label>x<sub>0</sub> = <input type="number" id="2x0"></label>
+    <label>f(x<sub>0</sub>) = <input type="number" id="2fx0"></label><br><br>
+    <label>x<sub>1</sub> = <input type="number" id="2x1"></label>
+    <label>f(x<sub>1</sub>) = <input type="number" id="2fx1"></label><br><br>
+    <label>x<sub>2</sub> = <input type="number" id="2x2"></label>
+    <label>f(x<sub>2</sub>) = <input type="number" id="2fx2"></label><br><br>
+    <button onclick="cuadratica()">Calcular</button><br><br>
+    <label>f(x) = <input type="number" id="2fx" readonly></label><label> aproximación</label><br><br>
+
+    <h1>Error relativo porcentual</h1>
+    <label>Valor verdadero = <input type="number" id="2vt"></label><br><br>
+    <button onclick="porcentajeError2()">Calcular</button><br><br>
+    <label>Resultado = <input type="number" id="2porcentaje" readonly></label><label> %</label><br><br>
+    <button onclick="limpiar2()">Limpiar valores</button>
+</body>
+</html>
